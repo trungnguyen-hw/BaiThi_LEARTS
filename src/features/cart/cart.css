@@ -1,0 +1,437 @@
+/* Scoped styles for Learts Cart Drawer */
+.learts-cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 440px;
+  max-width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.08);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Outfit', sans-serif;
+}
+
+.learts-cart-drawer .drawer-header {
+  padding: 24px 30px;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learts-cart-drawer .drawer-header h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #222;
+}
+
+.learts-cart-drawer .drawer-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.learts-cart-drawer .drawer-close-btn:hover {
+  color: #222;
+}
+
+.learts-cart-drawer .drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.learts-cart-drawer .empty-message {
+  color: #888;
+  font-size: 15px;
+}
+
+.learts-cart-drawer .cart-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.learts-cart-drawer .cart-item-row {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f9f9f9;
+  align-items: center;
+}
+
+.learts-cart-drawer .cart-item-image {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  background-color: #f7f7f7;
+}
+
+.learts-cart-drawer .cart-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.learts-cart-drawer .cart-item-name {
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.learts-cart-drawer .cart-item-name:hover {
+  color: #b89c7d;
+}
+
+.learts-cart-drawer .cart-item-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.learts-cart-drawer .cart-item-qty-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.learts-cart-drawer .cart-item-qty-btn {
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.learts-cart-drawer .cart-item-qty-btn:hover {
+  color: #222;
+  background-color: #f7f7f7;
+}
+
+.learts-cart-drawer .cart-item-qty-input {
+  width: 32px;
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 13px;
+  color: #222;
+  height: 28px;
+}
+
+.learts-cart-drawer .cart-item-remove-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.learts-cart-drawer .cart-item-remove-btn:hover {
+  color: #ff4d4f;
+}
+
+.learts-cart-drawer .drawer-footer {
+  padding: 30px;
+  border-top: 1px solid #f4f4f4;
+  background: #fafafa;
+}
+
+.learts-cart-drawer .drawer-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 24px;
+}
+
+.learts-cart-drawer .drawer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.learts-cart-drawer .drawer-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #222;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.learts-cart-drawer .drawer-btn-dark {
+  background: #222;
+  color: #ffffff;
+}
+
+.learts-cart-drawer .drawer-btn-dark:hover {
+  background: #b89c7d;
+  border-color: #b89c7d;
+}
+
+.learts-cart-drawer .drawer-btn-outline {
+  background: transparent;
+  color: #222;
+}
+
+.learts-cart-drawer .drawer-btn-outline:hover {
+  background: #222;
+  color: #ffffff;
+}
+
+.learts-cart-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+/* Scoped styles for Learts Toast */
+.learts-cart-toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 11000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.learts-cart-toast {
+  background: #222222;
+  color: #ffffff;
+  padding: 16px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 4px solid #b89c7d;
+  min-width: 320px;
+}
+
+.learts-cart-toast i {
+  color: #b89c7d;
+  font-size: 16px;
+}
+
+/* Scoped styles for Cart Page */
+.learts-cart-page {
+  font-family: 'Outfit', sans-serif;
+  color: #222;
+}
+
+.learts-cart-page .cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.learts-cart-page .cart-table th {
+  padding: 16px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.learts-cart-page .cart-table td {
+  padding: 24px 0;
+  border-bottom: 1px solid #f4f4f4;
+  vertical-align: middle;
+}
+
+.learts-cart-page .product-cell {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.learts-cart-page .product-image {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  background-color: #f7f7f7;
+}
+
+.learts-cart-page .product-title {
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.learts-cart-page .product-title:hover {
+  color: #b89c7d;
+}
+
+.learts-cart-page .qty-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  width: fit-content;
+}
+
+.learts-cart-page .qty-btn {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.learts-cart-page .qty-btn:hover {
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+.learts-cart-page .qty-input {
+  width: 40px;
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 13px;
+  color: #222;
+  height: 32px;
+}
+
+.learts-cart-page .remove-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.learts-cart-page .remove-btn:hover {
+  color: #ff4d4f;
+}
+
+.learts-cart-page .summary-card {
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  padding: 35px;
+  position: sticky;
+  top: 100px;
+}
+
+.learts-cart-page .summary-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  font-family: 'Playfair Display', serif;
+}
+
+.learts-cart-page .summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 14px;
+}
+
+.learts-cart-page .summary-row-total {
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.learts-cart-page .checkout-btn {
+  display: block;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  border: 1px solid #222;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin-top: 24px;
+}
+
+.learts-cart-page .checkout-btn:hover {
+  background: #b89c7d;
+  border-color: #b89c7d;
+}
+
+.learts-cart-page .continue-btn {
+  display: inline-block;
+  background: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 12px 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.learts-cart-page .continue-btn:hover {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+/* Scoped Add to Cart Button States */
+.learts-add-to-cart-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.learts-add-to-cart-btn.loading {
+  background-color: #555 !important;
+  color: transparent !important;
+}
+
+.learts-add-to-cart-btn.success {
+  background-color: #b89c7d !important;
+  border-color: #b89c7d !important;
+  color: #fff !important;
+}

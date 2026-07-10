@@ -1,0 +1,38 @@
+{
+  "name": "trungnguyen1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite",
+    "dev:server": "npm --prefix server run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "server:start": "npm --prefix server run start",
+    "db:init": "npm --prefix server run db:init",
+    "seed": "npm --prefix server run seed",
+    "seed:admin": "npm --prefix server run seed:admin"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "axios": "^1.18.1",
+    "framer-motion": "^12.42.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hook-form": "^7.81.0",
+    "react-router-dom": "^7.18.1",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "concurrently": "^10.0.3",
+    "json-server": "^1.0.0-beta.15",
+    "oxlint": "^1.71.0",
+    "vite": "^8.1.1"
+  }
+}

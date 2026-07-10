@@ -1,0 +1,161 @@
+USE learts_db;
+
+
+DELETE FROM order_items;
+DELETE FROM orders;
+DELETE FROM products;
+DELETE FROM categories;
+
+-- Seed Categories
+INSERT INTO categories (id, name, slug, description) VALUES
+('kitchen', 'Kitchen', 'kitchen', 'Kitchenware and dining accessories handcrafted with love.'),
+('toys', 'Toys', 'toys', 'Organic wooden toys and puzzles for kids.'),
+('decor', 'Decor', 'decor', 'Vases, handmade soaps, and decorative items to warm up your home.'),
+('accessories', 'Accessories', 'accessories', 'Handmade genuine leather and woolen apparel and accessories.');
+
+-- Seed Products
+INSERT INTO products (id, category_id, name, slug, description, price, old_price, image_url, hover_image_url, stock, featured, hot, is_new, sale, rating, sku) VALUES
+(
+  'boho-beard-mug', 
+  'kitchen', 
+  'Boho Beard Mug', 
+  'boho-beard-mug', 
+  'A beautiful handcrafted boho beard mug. Perfect for your morning coffee or tea. Highly durable and heat-resistant.', 
+  39.00, 
+  45.00, 
+  '/assets/images/product/s328/product-1.webp', 
+  '/assets/images/product/s328/product-1-hover.webp', 
+  10, 
+  1, 
+  0, 
+  0, 
+  1, 
+  4.50, 
+  'SKU-001'
+),
+(
+  'motorized-tricycle', 
+  'toys', 
+  'Motorized Tricycle', 
+  'motorized-tricycle', 
+  'A classic wooden motorized tricycle toy, crafted with organic wood and safe non-toxic paint. Great for kids.', 
+  35.00, 
+  NULL, 
+  '/assets/images/product/s328/product-2.webp', 
+  '/assets/images/product/s328/product-2-hover.webp', 
+  8, 
+  0, 
+  0, 
+  1, 
+  0, 
+  5.00, 
+  'SKU-002'
+),
+(
+  'walnut-cutting-board', 
+  'kitchen', 
+  'Walnut Cutting Board', 
+  'walnut-cutting-board', 
+  'Premium walnut cutting board, perfect for heavy-duty kitchen chopping or as an elegant cheese serving tray.', 
+  100.00, 
+  NULL, 
+  '/assets/images/product/s328/product-3.webp', 
+  '/assets/images/product/s328/product-3-hover.webp', 
+  5, 
+  1, 
+  1, 
+  0, 
+  0, 
+  4.80, 
+  'SKU-003'
+),
+(
+  'gilded-bowl-set', 
+  'kitchen', 
+  'Gilded Bowl Set', 
+  'gilded-bowl-set', 
+  'Handmade ceramic bowl set with a touch of gilded gold on the rim. Perfect for salad, soup or cereals.', 
+  19.00, 
+  22.00, 
+  '/assets/images/product/s328/product-4.webp', 
+  '/assets/images/product/s328/product-4-hover.webp', 
+  15, 
+  0, 
+  0, 
+  0, 
+  1, 
+  4.20, 
+  'SKU-004'
+),
+(
+  'vase-of-life', 
+  'decor', 
+  'Vase of Life', 
+  'vase-of-life', 
+  'Elegant ceramic flower vase that brings life to any room. Beautifully textured and glazed finish.', 
+  49.00, 
+  NULL, 
+  '/assets/images/product/s328/product-5.webp', 
+  '/assets/images/product/s328/product-5-hover.webp', 
+  12, 
+  1, 
+  0, 
+  0, 
+  0, 
+  4.70, 
+  'SKU-005'
+),
+(
+  'leather-handbag', 
+  'accessories', 
+  'Leather Handbag', 
+  'leather-handbag', 
+  '100% genuine leather handcrafted handbag. Sturdy straps, multiple pockets and premium bronze zippers.', 
+  120.00, 
+  150.00, 
+  '/assets/images/product/s328/product-6.webp', 
+  '/assets/images/product/s328/product-6-hover.webp', 
+  7, 
+  0, 
+  0, 
+  0, 
+  1, 
+  4.90, 
+  'SKU-006'
+),
+(
+  'cozy-wool-scarf', 
+  'accessories', 
+  'Cozy Wool Scarf', 
+  'cozy-wool-scarf', 
+  'Thick hand-knitted wool scarf to keep you warm in the coldest winters. Made with soft alpaca wool blend.', 
+  25.00, 
+  NULL, 
+  '/assets/images/product/s328/product-7.webp', 
+  '/assets/images/product/s328/product-7-hover.webp', 
+  20, 
+  1, 
+  0, 
+  0, 
+  0, 
+  4.60, 
+  'SKU-007'
+),
+(
+  'handcrafted-soap-set', 
+  'decor', 
+  'Handcrafted Soap Set', 
+  'handcrafted-soap-set', 
+  'Three bars of organic, cold-pressed soaps with essential oils of Lavender, Tea Tree and Orange Blossom.', 
+  15.00, 
+  NULL, 
+  '/assets/images/product/s328/product-8.webp', 
+  '/assets/images/product/s328/product-8-hover.webp', 
+  10, 
+  0, 
+  0, 
+  1, 
+  0, 
+  4.80, 
+  'SKU-008'
+);
